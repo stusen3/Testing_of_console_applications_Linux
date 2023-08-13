@@ -32,7 +32,7 @@ def test_step2():
 
 
 def test_step3():
-    assert checkout(f'cd {folderout}; 7z l arh1.7z', 'Method'), 'test3 FAIL'
+    assert checkout(f'cd {folderout}; 7z l arh1.7z', 'Type'), 'test3 FAIL'
 
 
 def test_step4():
