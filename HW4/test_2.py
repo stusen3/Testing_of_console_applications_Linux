@@ -8,13 +8,11 @@ with open('config.yaml') as f:
 
 class Testneg:
     def test_nstep1(self, make_folders, make_bad_arx):
-        # test neg 1
         assert ssh_checkout_negative(data["ip"], data["user"], data["passwd"],
                                      "cd {}; 7z e {}.{} -o {} -y".format(data["folder_out"], make_bad_arx, data["type"],
                                                                         data["folder_ext"]), "ERROR:"), "test1 FAIL"
 
     def test_nstep2(self, make_bad_arx):
-        # test neg 2
         assert ssh_checkout_negative(data["ip"], data["user"], data["passwd"],
                                      "cd {}; 7z t {}.{}".format(data["folder_out"], make_bad_arx,
                                                                 data["type"]), "ERROR:"), "test2 FAIL"
